@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img src="{{ product['D:\projects\c0921720Assignment2\static\images\image1.jpeg'] }}" class="card-img-top" alt="{{ product['name'] }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product['name'] }}</h5>
+                <p class="card-text">Tag: {{ product['tag'] }}</p>
+                <p class="card-text">Price: ${{ product['price'] }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
