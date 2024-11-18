@@ -1,2 +1,4 @@
-flask
+Flask
 pymongo
+pytest
+pytest-mock
